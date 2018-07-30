@@ -1,2 +1,2 @@
-# sslproxygen
-A simple html parser test
+# sslProxyGen
+A simple PHP html parser test
