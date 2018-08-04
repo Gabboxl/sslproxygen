@@ -2,6 +2,8 @@
 A simple PHP html parser test
 
 # Usage
+From cli -
+-----------
 
 $ php proxygen.php PATH
 
