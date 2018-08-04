@@ -12,7 +12,7 @@ $xpath1 = new DOMXPath($dom1);
 $ke = 0;
 	
 //creo (o pulisco) file carzini (proxy)
-file_put_contents("carzini.txt", "");
+file_put_contents($argv[1]."carzini.txt", "");
 
 while($k < 99){
   $k++;
@@ -23,7 +23,7 @@ while($k < 99){
     foreach( $portaxd as $porta )
     {
 		//replace "PATH" with the path where you want to save the file
-      file_put_contents("PATH", $ip->nodeValue.":".$porta->nodeValue."
+      file_put_contents($argv[1]."carzini.txt", $ip->nodeValue.":".$porta->nodeValue."
 ", FILE_APPEND);
 
     }
