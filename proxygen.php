@@ -5,24 +5,20 @@ $dom1 = new DOMDocument();
 
 $xpath1 = new DOMXPath($dom1);
 
-//$roba1 = $xpath1->query('//*[@id="proxylisttable"]/tbody');//*[@id="proxylisttable"]/tbody/tr[1]/td[1]
-//$roba12 = $xpath1->query('//*[@id="proxylisttable"]/tbody/tr[1]/td[1]');
-////*[@id="proxylisttable"]/tbody/tr[1]/td[2]
 
 $ke = 0;
 	
 //creo (o pulisco) file carzini (proxy)
 file_put_contents($argv[1]."carzini.txt", "");
 
-while($k < 99){
+while($k < 99){ //for every row we extract the ip + port
   $k++;
-  $ipxd = $xpath1->query("//*[@id='proxylisttable']/tbody/tr[$k]/td[1]");
-  $portaxd = $xpath1->query("//*[@id='proxylisttable']/tbody/tr[$k]/td[2]");
+  $ipxd = $xpath1->query("//*[@id='proxylisttable']/tbody/tr[$k]/td[1]"); //xpath of the ip	
+  $portaxd = $xpath1->query("//*[@id='proxylisttable']/tbody/tr[$k]/td[2]");  //xpath of the port
   foreach( $ipxd as $ip )
   {
     foreach( $portaxd as $porta )
     {
-		//replace "PATH" with the path where you want to save the file
       file_put_contents($argv[1]."carzini.txt", $ip->nodeValue.":".$porta->nodeValue."
 ", FILE_APPEND);
 
