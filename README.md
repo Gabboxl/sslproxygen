@@ -10,5 +10,7 @@ $ php proxygen.php PATH
 
 then there will be created a new file called "carzini.txt" in *PATH* with the proxies
 
-With get request
+With GET request
 -----------
+*under developement*
+
