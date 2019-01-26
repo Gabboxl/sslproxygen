@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET['path']) or isset($argv[1]) {
+if(isset($_GET['path']) or isset($argv[1])) {
 	//creo (o pulisco) file carzini (proxy)
 	file_put_contents($_GET['path'].$argv[1]."/carzini.txt", "");
 }
