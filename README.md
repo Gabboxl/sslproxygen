@@ -1,4 +1,4 @@
-# sslProxyGen
+# sslProxyGen [![StyleCI](https://github.styleci.io/repos/142882557/shield?branch=master)](https://github.styleci.io/repos/142882557)
 A simple PHP html parser test
 
 # Usage
