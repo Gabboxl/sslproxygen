@@ -1,5 +1,11 @@
 <?php
 
+if(isset($_GET['path']) or isset($argv[1]) {
+	//creo (o pulisco) file carzini (proxy)
+	file_put_contents($_GET['path'].$argv[1]."/carzini.txt", "");
+}
+
+   
 $dom1 = new DOMDocument();
 @$dom1->loadHTML(file_get_contents("https://www.sslproxies.org/"));
 
@@ -7,9 +13,6 @@ $xpath1 = new DOMXPath($dom1);
 
 
 $ke = 0;
-	
-//creo (o pulisco) file carzini (proxy)
-file_put_contents($argv[1]."carzini.txt", "");
 
 while($k < 99){ //for every row we extract the ip + port
   $k++;
@@ -19,10 +22,14 @@ while($k < 99){ //for every row we extract the ip + port
   {
     foreach( $portaxd as $porta )
     {
-      file_put_contents($argv[1]."carzini.txt", $ip->nodeValue.":".$porta->nodeValue."
-", FILE_APPEND);
-
-    }
+	    if(isset($_GET['path']) or isset($argv[1]) {
+	          file_put_contents($_GET['path'].$argv[1]."/carzini.txt", $ip->nodeValue.":".$porta->nodeValue."\n", FILE_APPEND);
+    		}
+	       
+	       if($_GET['print'] == "yes") {
+		       echo($ip->nodeValue.":".$porta->nodeValue."\n");
+	       }
+	}
   }
   }
 
