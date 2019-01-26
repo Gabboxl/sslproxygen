@@ -13,5 +13,8 @@ then there will be created a new file called "carzini.txt" in *PATH* with the pr
 
 ### With GET request
 -----------
-*under developement*
+Parameters _
+
+"print" = "yes" -> prints the proxies - optional
+"path" = *path to the proxy file* optional
 
