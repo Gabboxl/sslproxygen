@@ -22,7 +22,7 @@ while($k < 99){ //for every row we extract the ip + port
   {
     foreach( $portaxd as $porta )
     {
-	    if(isset($_GET['path']) or isset($argv[1]) {
+	    if(isset($_GET['path']) or isset($argv[1])) {
 	          file_put_contents($_GET['path'].$argv[1]."/carzini.txt", $ip->nodeValue.":".$porta->nodeValue."\n", FILE_APPEND);
     		}
 	       
