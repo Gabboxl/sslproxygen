@@ -10,7 +10,7 @@ $ php proxygen.php <PATH>
 
 example::: ``` $ php proxygen.php .```   (the dot stands for the cwd)
 
-then there will be created a new file called "carzini.txt" in *PATH* with the proxies
+then there will be created a new file called "carzini.txt" in *PATH* with the proxies in.
 
 ### With GET request
 -----------
