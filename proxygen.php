@@ -2,7 +2,8 @@
 
 if (isset($_GET['path']) or isset($argv[1])) {
     //creo (o pulisco) file carzini (proxy)
-    file_put_contents($_GET['path'].$argv[1].'/carzini.txt', '');
+    if(isset($_GET['path'])){$path = $_GET['path'];} else {$path = $argv[1];}
+    file_put_contents($path.'/carzini.txt', '');
 }else{
 die("\n You need to specify a path for the output! \n");
 }
