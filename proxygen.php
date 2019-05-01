@@ -21,9 +21,7 @@ while ($k < 99) { //for every row we extract the ip + port
   $portaxd = $xpath1->query("//*[@id='proxylisttable']/tbody/tr[$k]/td[2]");  //xpath of the port
   foreach ($ipxd as $ip) {
       foreach ($portaxd as $porta) {
-          if (isset($_GET['path']) or isset($argv[1])) {
-              file_put_contents($_GET['path'].$argv[1].'/carzini.txt', $ip->nodeValue.':'.$porta->nodeValue."\n", FILE_APPEND);
-          }
+              file_put_contents($path.'/carzini.txt', $ip->nodeValue.':'.$porta->nodeValue."\n", FILE_APPEND);
 
           if (isset($_GET['print']) and $_GET['print'] == 'yes') {
               echo $ip->nodeValue.':'.$porta->nodeValue."\n";
