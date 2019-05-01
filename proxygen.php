@@ -3,6 +3,8 @@
 if (isset($_GET['path']) or isset($argv[1])) {
     //creo (o pulisco) file carzini (proxy)
     file_put_contents($_GET['path'].$argv[1].'/carzini.txt', '');
+}else{
+die("\n You need to specify a path for the output! \n");
 }
 
 $dom1 = new DOMDocument();
@@ -10,7 +12,7 @@ $dom1 = new DOMDocument();
 
 $xpath1 = new DOMXPath($dom1);
 
-$ke = 0;
+$k = 0;
 
 while ($k < 99) { //for every row we extract the ip + port
     $k++;
@@ -22,7 +24,7 @@ while ($k < 99) { //for every row we extract the ip + port
               file_put_contents($_GET['path'].$argv[1].'/carzini.txt', $ip->nodeValue.':'.$porta->nodeValue."\n", FILE_APPEND);
           }
 
-          if ($_GET['print'] == 'yes') {
+          if (isset($_GET['print']) and $_GET['print'] == 'yes') {
               echo $ip->nodeValue.':'.$porta->nodeValue."\n";
           }
       }
