@@ -34,7 +34,7 @@ while ($k < 99) { //for every row we extract the ip + port
   }
 }
 
-  //coded bay @gabbo_xl (gabboxl.ga)
+  //coded bay Gabboxl (https://github.com/Gabboxl)
 
 //test
 
