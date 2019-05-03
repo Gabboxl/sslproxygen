@@ -35,28 +35,3 @@ while ($k < 99) { //for every row we extract the ip + port
 }
 
   //coded bay Gabboxl (https://github.com/Gabboxl)
-
-//test
-
-/*
-foreach( $roba1 as $node )
-{
-  foreach( $roba12 as $node2 )
-  {
-  file_put_contents("asd.php", "");
-  preg_match_all("/[0-9]+/i",$node->nodeValue,$se);
-  preg_match_all("/[0-9]+.[0-9]+.[0-9]+.[0-9]+/i",$node2->nodeValue,$var2);
-    foreach( $se as $icsd){
-      foreach( $node2->nodeValue as $icsd12){
-      $k = 0;
-      while($k < 99){
-        $k++;
-    file_put_contents("asd.php", $icsd12[$k].":".$icsd[$k]."
-", FILE_APPEND);
-
-  }
-}
-}//s
-}
-}
-*/
