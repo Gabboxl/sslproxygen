@@ -33,5 +33,6 @@ while ($k < 99) { //for every row we extract the ip + port
       }
   }
 }
+echo("\n yay! The proxies are now copied into $path/carzini.txt");
 
   //coded bay Gabboxl (https://github.com/Gabboxl)
